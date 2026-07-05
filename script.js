@@ -279,7 +279,7 @@ onload = function()
       var calBuf0 = mat.identity(mat.create());
       var calBuf1 = mat.identity(mat.create());
       mat.multiply(a_lMatrix[0],a_lMatrix[1],calBuf0);
-      mat.multiply(a_bMatrix[0],a_bMatrix[1],calBuf1);
+      mat.multiply(calBuf1,a_bMatrix[1],calBuf1);
       mat.multiply(calBuf0,calBuf1,a_wMatrix[1]);
 	    
       // モデル描画
