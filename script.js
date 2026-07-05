@@ -277,7 +277,7 @@ onload = function()
       a_wMatrix[0] = a_lMatrix[0];
 
       var calBuf = mat.identity(mat.create());
-      mat.multiply(a_bMatrix[1],a_lMatrix[0],calBuf);
+      mat.multiply(a_bMatrix[0],a_lMatrix[0],calBuf);
       mat.multiply(a_wMatrix[0],calBuf,a_wMatrix[1]);
 	    
       // モデル描画
