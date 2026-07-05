@@ -275,7 +275,10 @@ onload = function()
 
       // モデルのワールド行列の生成【ここをなんとかする】
       a_wMatrix[0] = a_lMatrix[0];
-      a_wMatrix[1] = a_wMatrix[0];
+
+      var calBuf = mat.identity(mat.create());
+      mat.multiply(a_bMatrix[1],a_lMatrix[1],calBuf);
+      mat.multiply(a_wMatrix[0],calBuf,a_wMatrix[1]);
 	    
       // モデル描画
       gl.useProgram(prg_skin);
